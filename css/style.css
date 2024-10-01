@@ -57,9 +57,6 @@ body {
     border-color: transparent;
 }
 
-.card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 .timeline {
     position: relative;
     margin: 0 auto;
@@ -115,7 +112,8 @@ header h4 {
 }
 
 .card {
-    border: 1px solid #000; /* Cambia el color según tu diseño */
+    border: 1px solid #000; /* Color del borde */
+    border-radius: 8px; /* Esquinas redondeadas */
     transition: transform 0.2s;
 }
 
