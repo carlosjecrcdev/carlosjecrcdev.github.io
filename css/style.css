@@ -1,0 +1,124 @@
+#hero {
+    background: url('background-image.jpg') no-repeat center center/cover;
+}
+
+section {
+    padding: 60px 0;
+}
+
+body {
+    font-family: "Alata", sans-serif;
+    color: #333;
+    background-color: #000;
+}
+
+#hero {
+    background-color: #000; /* Fondo claro */
+    padding: 60px 0;
+}
+
+#hero img {
+    border: 3px solid #919191; /* Borde del color principal */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+#hero h2 {
+    font-size: 2rem; /* Ajusta el tamaño del título */
+    font-weight: bold;
+}
+
+#hero p {
+    font-size: 1.2rem; /* Tamaño del texto */
+    color: #555;
+}
+
+#hero a {
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+#hero .fab {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+#hero .fab:hover {
+    color: #919191;
+}
+
+.nav-tabs .nav-link {
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #000;
+    color: white;
+    border-color: transparent;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 600px;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #007bff;
+    transform: translateX(-50%);
+    top: 10px;
+}
+
+.timeline-content {
+    position: relative;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 60px; /* Alineación a la derecha */
+}
+
+.timeline-item h3 {
+    color: #007bff;
+    margin-bottom: 5px;
+    font-size: 1rem; /* Tamaño de fuente más pequeño */
+}
+
+.timeline-item p {
+    margin: 0;
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+header h4 {
+    margin: 0;
+    font-weight: 300;
+}
+
+.card {
+    border: 1px solid #000; /* Cambia el color según tu diseño */
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+}
