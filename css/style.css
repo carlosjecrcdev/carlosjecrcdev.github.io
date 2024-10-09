@@ -1,122 +1,173 @@
-#hero {
-    background: url('background-image.jpg') no-repeat center center/cover;
-}
-
-section {
-    padding: 60px 0;
+header, footer {
+    background-color: #003366;
+    color: #ffffff;
 }
 
 body {
-    font-family: "Alata", sans-serif;
-    color: #333;
-    background-color: #000;
+    background-color: #111a22;
+    margin: 0;
 }
 
-#hero {
-    background-color: #000;
-    padding: 60px 0;
+.content-section {
+    background-color: #061a29;
+    color: #ffffff;
+    padding: 20px;
 }
 
-#hero img {
-    border: 3px solid #919191;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+a {
+    color: #ffffff;
+    text-decoration: none;
 }
 
-#hero h2 {
-    font-size: 2rem;
-    font-weight: bold;
+a:hover {
+    text-decoration: underline;
 }
 
-#hero p {
-    font-size: 1.2rem;
-    color: #555;
+.btn {
+    background-color: #004d99;
+    border: none;
+    color: #ffffff;
 }
 
-#hero a {
-    font-size: 1rem;
-    padding: 10px 20px;
+.btn:hover {
+    background-color: #003366;
 }
 
-#hero .fab {
-    font-size: 1.5rem;
-    color: #000;
+.logo img {
+    max-height: 50px;
 }
 
-#hero .fab:hover {
-    color: #919191;
+.content-section {
+    background-color: #052033;
+    color: #f7f7f7;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e3f2fd;
+}
+
+.nav-links i {
+    margin-right: 8px;
+}
+
+#sobre-mi {
+    background-color: #071927;
+    color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#sobre-mi h2 {
+    color: #e3f2fd;
+}
+
+#sobre-mi p {
+    color: #ffffff;
+}
+
+#sobre-mi img {
+    border: 3px solid #004d99;
+}
+
+#experiencia {
+    background-color: #04375e;
+    color: #f7f7f7;
+    padding: 40px 20px;
+}
+
+#experiencia h2 {
+    color: #e3f2fd;
 }
 
 .nav-tabs .nav-link {
-    font-size: 1.1rem;
-    color: #000;
+    color: #ffffff;
+    background-color: #003366;
+    border: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.nav-tabs .nav-link.active {
-    background-color: #000;
-    color: white;
-    border-color: transparent;
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link.active {
+    background-color: #004d99;
+    color: #e3f2fd;
 }
 
-.timeline {
-    position: relative;
-    margin: 0 auto;
-    padding: 20px 0;
-    max-width: 600px;
+.tab-content .card {
+    background-color: #052033;
+    color: #ffffff;
+    border: none;
 }
 
-.timeline-item {
-    position: relative;
-    padding: 10px 0;
-    text-align: left;
+.tab-content .card-body {
+    padding: 20px;
 }
 
-.timeline-item:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    width: 4px;
-    height: 100%;
-    background-color: #007bff;
-    transform: translateX(-50%);
-    top: 10px;
+.tab-content h3.card-title {
+    color: #e3f2fd;
 }
 
-.timeline-content {
-    position: relative;
-    background-color: white;
-    padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-left: 60px; 
+.tab-content ul.list-unstyled li i {
+    color: #004d99;
+    margin-right: 8px;
 }
 
-.timeline-item h3 {
-    color: #007bff;
-    margin-bottom: 5px;
-    font-size: 1rem; 
-}
-
-.timeline-item p {
-    margin: 0;
-    font-size: 0.9rem;
-}
-
-header h1 {
-    font-size: 2rem;
-    margin: 0;
-}
-
-header h4 {
-    margin: 0;
-    font-weight: 300;
-}
-
-.card {
-    border: 1px solid #000; 
+.skill-section {
+    border: 2px solid #ffffff;
     border-radius: 8px;
-    transition: transform 0.2s;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(6, 26, 41, 0.8);
 }
 
-.card:hover {
-    transform: scale(1.05); 
+.skill-section h5 {
+    color: #e3f2fd;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: #e3f2fd;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #42a5f5;
+}
+.card-title {
+    color: #FFA500 !important; /* Color naranja */
 }
