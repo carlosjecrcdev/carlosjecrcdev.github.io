@@ -1,228 +1,167 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlos Cruz</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Fuente de íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="images/web.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
-<body>
-    <header class="py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo">
-                <img src="https://media.giphy.com/media/oFYKw5OTZBZzVONpUh/giphy.gif" alt="Logo" class="logo-img"> <!-- GIF como logo -->
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#sobre-mi"><i class="fas fa-info-circle"></i> Acerca de mí</a></li>
-                    <li><a href="#experiencia"><i class="fas fa-project-diagram"></i> Experiencia</a></li>
-                    <li><a href="#skills"><i class="fas fa-cogs"></i> Habilidades</a></li>
-                </ul>
-            </nav>
+<body>  
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <span class="text-orange fw-bold">Carlos</span> <span class="text-white fw-bold">Cruz</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#acerca-de-mi">Acerca de mí</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#experiencia">Experiencia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+            </ul>        
+          </div>
         </div>
-    </header>
-
-    <div class="content-section py-5" id="sobre-mi">
-        <div class="container text-center">
-            <img src="images/1655266244871.jfif" alt="Foto de Carlos Cruz" class="rounded-circle mb-4" style="width: 150px;">
-            <h2 class="mb-3">Carlos Jesus Cruz Cervantes</h2>
-            <p id="description"></p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/carloscruzdev/"  target="_blank" class="social-icon">
+      </nav>
+      <section id="acerca-de-mi" class="about-section d-flex flex-column align-items-center text-center">
+        <img src="images/1655266244871.jfif" alt="Carlos Cruz" class="profile-pic">
+        <h2 class="name">Carlos Cruz</h2>
+        <div class="text-container">
+            <p class="description">
+                👋 ¡Hola! Soy desarrollador de software .NET con más de 5 años de experiencia en la creación de APIs, Desktop Apps y WebApps.
+            </p>
+            <div class="d-flex justify-content-center align-items-center">
+                <a href="documents/CV_CarlosCruz.pdf" download class="btn btn-outline-light me-2">Descargar CV</a>
+                <div class="social-buttons d-flex">
+                  <a href="https://www.linkedin.com/in/carloscruzdev/" class="btn btn-social" target="_blank">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/carlosjecrcdev" target="_blank" class="social-icon">
+                <a href="https://github.com/carlosjecrcdev" class="btn btn-social" target="_blank">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="mailto:carlosjecrc@gmail.com" class="social-icon">
+                <a href="mailto:carlosjecrc@gmail.com" class="btn btn-social" target="_blank">
                     <i class="fas fa-envelope"></i>
                 </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="content-section py-5" id="experiencia">
-        <div class="container text-center">
-            <h2>Experiencia</h2>
-             <ul class="nav nav-tabs justify-content-center" id="experienceTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="ventus-tab" data-bs-toggle="tab" href="#ventus" role="tab" aria-controls="ventus" aria-selected="true">Ventus Technology</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="724-tab" data-bs-toggle="tab" href="#724" role="tab" aria-controls="724" aria-selected="false">724 MIX</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="tecnoap-tab" data-bs-toggle="tab" href="#tecnoap" role="tab" aria-controls="tecnoap" aria-selected="false">Tecnoap</a>
-                </li>
-            </ul>
-            <div class="tab-content mt-4" id="experienceTabContent">
-                <div class="tab-pane fade show active" id="ventus" role="tabpanel" aria-labelledby="ventus-tab">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Ventus Technology</h3>
-                            <p><strong>Posición:</strong> FullStack Developer</p>
-                            <p><strong>Duración:</strong> Enero 2022 - Actualidad</p>
-                            <p><strong>Responsabilidades:</strong></p>
-                            <ul class="list-unstyled">
-                                <li><i class="fab fa-microsoft"></i> Desarrollo de APIs con .NET 6 y .NET 8</li>
-                                <li><i class="fab fa-angular"></i> Creación de WebApps con Angular 16 y Angular 17</li>
-                                <li><i class="fab fa-docker"></i> Despliegue de aplicaciones con Kubernetes</li>
-                                <li><i class="fas fa-database"></i> Gestión de bases de datos SQL</li>
-                                <li><i class="fas fa-clipboard-list"></i> Implementación de servicios de monitoreo y control de eventos con EAGLE</li>
-                                <li><i class="fas fa-exchange-alt"></i> Integración de servicios de mensajería en tiempo real utilizando Kafka y .NET</li>
-                                <li><i class="fab fa-github"></i> Control de versiones y colaboración en proyectos con GitHub</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="tab-pane fade" id="724" role="tabpanel" aria-labelledby="724-tab">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">724 Mix</h3>
-                            <p><strong>Posición:</strong> FullStack Developer</p>
-                            <p><strong>Duración:</strong> Marzo 2019 - Enero 2022</p>
-                            <p><strong>Responsabilidades:</strong></p>
-                            <ul class="list-unstyled">
-                                <li><i class="fab fa-microsoft"></i> Desarrollo e implementación de APIs con .NET 2.2 y .NET 3.1</li>
-                                <li><i class="fas fa-database"></i> Gestión de bases de datos SQL Server y PostgreSQL</li>
-                                <li><i class="fab fa-windows"></i> Desarrollo de aplicaciones de escritorio con .NET Framework</li>
-                                <li><i class="fas fa-paint-brush"></i> Diseño de interfaces de usuario para aplicaciones web y de escritorio utilizando DevExpress</li>
-                                <li><i class="fab fa-gitlab"></i> Control de versiones y gestión de proyectos con GitLab</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="tab-pane fade" id="tecnoap" role="tabpanel" aria-labelledby="tecnoap-tab">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3 class="card-title">Tecnoap</h3>
-                            <p><strong>Posición:</strong> FullStack Developer</p>
-                            <p><strong>Duración:</strong> Julio 2018 - Marzo 2019</p>
-                            <p><strong>Responsabilidades:</strong></p>
-                            <ul class="list-unstyled">
-                                <li><i class="fab fa-microsoft"></i> Desarrollo Web ASP.NET MVC 5</li>
-                                <li><i class="fab fa-windows"></i> Desarrollo de aplicaciones de escritorio con WPF y MVVM</li>
-                                <li><i class="fas fa-database"></i> Gestión de bases de datos con SQL Server y Oracle</li>
-                                <li><i class="fab fa-github"></i> Control de versiones con GitHub</li>
-                            </ul>
-                        </div>
-                    </div>
+                
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    <div class="content-section py-5" id="skills">
-        <div class="container text-center">
-            <h2>Skills</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="skill-section">
-                        <h5 class="text-center mb-3">Backend</h5>
-                        <div class="row">
-                            <div class="col-6 text-center">
-                                <i class="fab fa-microsoft fa-2x"></i><br>
-                                <span style="font-size: 0.8rem;">.NET</span>
-                            </div>
-                            <div class="col-6 text-center">
-                                <i class="fab fa-microsoft fa-2x"></i><br>
-                                <span style="font-size: 0.8rem;">.NET Framework</span>
-                            </div>
-                            <div class="col-6 text-center">
-                                <i class="fab fa-docker fa-2x"></i><br>
-                                <span style="font-size: 0.8rem;">Kubernetes</span>
-                            </div>
-                            <div class="col-6 text-center">
-                                <i class="fas fa-database fa-2x"></i><br>
-                                <span style="font-size: 0.8rem;">SQL Server</span>
-                            </div>
-                            <div class="col-6 text-center">
-                                <i class="fas fa-database fa-2x"></i><br>
-                                <span style="font-size: 0.8rem;">PostgreSQL</span>
-                            </div>
-                            <div class="col-6 text-center">
-                                <i class="fas fa-database fa-2x"></i><br>
-                                <span style="font-size: 0.8rem;">Oracle SQL</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-md-4 mb-4">
-                    <div class="skill-section">
-                        <h5 class="text-center mb-3">Frontend</h5>
-                        <div class="row">
-                            <div class="col-6 text-center">
-                                <i class="fab fa-angular fa-2x"></i><br>
-                                <span style="font-size: 0.8rem;">Angular</span>
-                            </div>
-                            <div class="col-6 text-center">
-                                <i class="fab fa-dev fa-2x"></i><br>
-                                <span style="font-size: 0.8rem;">DevExpress</span>
-                            </div>
-                            <div class="col-6 text-center">
-                                <i class="fab fa-html5 fa-2x"></i><br>
-                                <span style="font-size: 0.8rem;">HTML</span>
-                            </div>
-                            <div class="col-6 text-center">
-                                <i class="fab fa-css3-alt fa-2x"></i><br>
-                                <span style="font-size: 0.8rem;">CSS</span>
-                            </div>
-                            <div class="col-6 text-center">
-                                <i class="fab fa-js fa-2x"></i><br>
-                                <span style="font-size: 0.8rem;">JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-md-4 mb-4">
-                    <div class="skill-section">
-                        <h5 class="text-center mb-3">Control</h5>
-                        <div class="row">
-                            <div class="col-6 text-center">
-                                <i class="fab fa-github fa-2x"></i><br>
-                                <span style="font-size: 0.8rem;">GitHub</span>
-                            </div>
-                            <div class="col-6 text-center">
-                                <i class="fab fa-gitlab fa-2x"></i><br>
-                                <span style="font-size: 0.8rem;">GitLab</span>
-                            </div>
-                            <div class="col-6 text-center">
-                                <i class="fab fa-jira fa-2x"></i><br>
-                                <span style="font-size: 0.8rem;">Jira</span>
-                            </div>
-                            <div class="col-6 text-center">
-                                <i class="fas fa-check-circle fa-2x"></i><br>
-                                <span style="font-size: 0.8rem;">SCRUM</span>
-                            </div>
-                            <div class="col-6 text-center">
-                                <i class="fas fa-clipboard-list fa-2x"></i><br>
-                                <span style="font-size: 0.8rem;">EAGLE</span>
-                            </div>
-                            <div class="col-6 text-center">
-                                <i class="fas fa-exchange-alt fa-2x"></i><br>
-                                <span style="font-size: 0.8rem;">Kafka</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    </section>
+      <section id="experiencia" class="experience-section">
+        <div class="container">
+          <h2 class="text-center">Experiencia</h2>
+          <div class="timeline">
+         
+            <div class="timeline-item">
+              <div class="timeline-icon"></div>
+              <div class="timeline-content">
+                <h3>Ventus Technology</h3>
+                <p><strong>Full Stack Developer</strong> Enero 2022 - Actualidad</p>
+                <ul class="list-unstyled">
+                  <li><i class="fab fa-microsoft"></i> Desarrollo de APIs con .NET 6 y .NET 8</li>
+                  <li><i class="fab fa-angular"></i> Creación de WebApps con Angular 16 y Angular 17</li>
+                  <li><i class="fab fa-docker"></i> Despliegue de aplicaciones con Kubernetes</li>
+                  <li><i class="fas fa-database"></i> Gestión de bases de datos SQL</li>
+                  <li><i class="fas fa-clipboard-list"></i> Implementación de servicios de monitoreo y control de eventos con EAGLE</li>
+                  <li><i class="fas fa-exchange-alt"></i> Integración de servicios de mensajería en tiempo real utilizando Kafka y .NET</li>
+                  <li><i class="fab fa-github"></i> Control de versiones y colaboración en proyectos con GitHub</li>
+              </ul>
+              </div>
             </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-icon"></div>
+              <div class="timeline-content">
+                <h3>724</h3>
+                <p><strong>Software Developer</strong>  Marzo 2019 - Enero 2022</p>
+                <ul class="list-unstyled">
+                  <li><i class="fab fa-microsoft"></i> Desarrollo e implementación de APIs con .NET 2.2 y .NET 3.1</li>
+                  <li><i class="fas fa-database"></i> Gestión de bases de datos SQL Server y PostgreSQL</li>
+                  <li><i class="fab fa-windows"></i> Desarrollo de aplicaciones de escritorio con .NET Framework</li>
+                  <li><i class="fas fa-paint-brush"></i> Diseño de interfaces de usuario para aplicaciones web y de escritorio utilizando DevExpress</li>
+                  <li><i class="fab fa-gitlab"></i> Control de versiones y gestión de proyectos con GitLab</li>
+              </ul>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-icon"></div>
+              <div class="timeline-content">
+                <h3>Tecnoap</h3>
+                <p><strong>Software Developer</strong> Julio 2018 - Marzo 2019</p>
+                <ul class="list-unstyled">
+                  <li><i class="fab fa-microsoft"></i> Desarrollo Web ASP.NET MVC 5</li>
+                  <li><i class="fab fa-windows"></i> Desarrollo de aplicaciones de escritorio con WPF y MVVM</li>
+                  <li><i class="fas fa-database"></i> Gestión de bases de datos con SQL Server y Oracle</li>
+                  <li><i class="fab fa-github"></i> Control de versiones con GitHub</li>
+              </ul>
+              </div>
+            </div>   
         </div>
-    </div>
-    
-
-    <footer class="py-3 mt-auto">
+      </section>
+      <section id="skills" class="skills-section">
         <div class="container text-center">
-            <p>&copy; 2024 Carlos Cruz. Todos los derechos reservados.</p>
+          <h2 class="text-center">Skills</h2>
+          <div class="row justify-content-center">
+            <!-- Backend Skills -->
+            <div class="col-md-4">
+              <h3>Backend</h3>
+              <ul class="skill-list">
+                <li><i class="fas fa-server"></i> .NET</li>
+                <li><i class="fas fa-code"></i> .NET Framework</li>
+                <li><i class="fas fa-cubes"></i> Kubernetes</li>
+                <li><i class="fas fa-database"></i> SQL Server</li>
+                <li><i class="fas fa-database"></i> PostgreSQL</li>
+                <li><i class="fas fa-database"></i> Oracle SQL</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h3>Frontend</h3>
+              <ul class="skill-list">
+                <li><i class="fab fa-angular"></i> Angular</li>
+                <li><i class="fas fa-laptop-code"></i> DevExpress</li>
+                <li><i class="fab fa-html5"></i> HTML</li>
+                <li><i class="fab fa-css3-alt"></i> CSS</li>
+                <li><i class="fab fa-js"></i> JavaScript</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h3>Control</h3>
+              <ul class="skill-list">
+                <li><i class="fab fa-github"></i> GitHub</li>
+                <li><i class="fab fa-gitlab"></i> GitLab</li>
+                <li><i class="fas fa-tasks"></i> Jira</li>
+                <li><i class="fas fa-check-circle"></i> SCRUM</li>
+                <li><i class="fas fa-bell"></i> EAGLE</li>
+                <li><i class="fas fa-stream"></i> Kafka</li>
+              </ul>
+            </div>
+          </div>
         </div>
-    </footer>
+      </section>
+      <footer class="footer-section">
+        <div class="container text-center">
+          <p>&copy; 2024 Carlos Cruz</p>       
+        </div>
+      </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
