@@ -1,173 +1,241 @@
-header, footer {
-    background-color: #003366;
-    color: #ffffff;
-}
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-body {
-    background-color: #111a22;
+* {
+    font-family: "Chakra Petch", sans-serif;
     margin: 0;
-}
-
-.content-section {
-    background-color: #061a29;
-    color: #ffffff;
-    padding: 20px;
-}
-
-a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.btn {
-    background-color: #004d99;
-    border: none;
-    color: #ffffff;
-}
-
-.btn:hover {
-    background-color: #003366;
-}
-
-.logo img {
-    max-height: 50px;
-}
-
-.content-section {
-    background-color: #052033;
-    color: #f7f7f7;
-}
-
-.logo-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-links {
-    list-style: none;
     padding: 0;
-    display: flex;
-    gap: 20px;
 }
 
-.nav-links li {
-    display: inline;
+/* Navbar */
+.navbar {
+  background-color: #003366;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 500;
-    transition: color 0.3s;
+.navbar-nav {
+  margin: 0 auto;
 }
 
-.nav-links a:hover {
-    color: #e3f2fd;
+.navbar-nav .nav-link {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-right: 20px;
 }
 
-.nav-links i {
-    margin-right: 8px;
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+  opacity: 0.7;
+}
+.text-orange {
+  color: #ff9900;
+}
+.navbar-brand {
+  margin-right: 0.5rem; 
+}
+.text-white {
+  color: white;
 }
 
-#sobre-mi {
-    background-color: #071927;
-    color: #f7f7f7;
-    padding: 20px;
-    border-radius: 10px;
+.social-icons {
+  display: flex;
+  gap: 10px;
 }
 
-#sobre-mi h2 {
-    color: #e3f2fd;
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-#sobre-mi p {
-    color: #ffffff;
+.icon:hover {
+  background-color: white;
+  color: #003366;
 }
 
-#sobre-mi img {
-    border: 3px solid #004d99;
+.about-section {
+  background-color: #000000; 
+  color: white;
+  padding: 50px 0;
 }
 
-#experiencia {
-    background-color: #04375e;
-    color: #f7f7f7;
-    padding: 40px 20px;
+.about-section h2 {
+  font-size: 2rem;
+  margin: 20px 0;
 }
 
-#experiencia h2 {
-    color: #e3f2fd;
+.about-section .text-container {
+  margin-top: 20px;
 }
 
-.nav-tabs .nav-link {
-    color: #ffffff;
-    background-color: #003366;
-    border: none;
-    padding: 10px 20px;
-    transition: background-color 0.3s, color 0.3s;
+.btn-social {
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
 }
 
-.nav-tabs .nav-link:hover, .nav-tabs .nav-link.active {
-    background-color: #004d99;
-    color: #e3f2fd;
+.btn-social i {
+  font-size: 18px;
+  color: white;
 }
 
-.tab-content .card {
-    background-color: #052033;
-    color: #ffffff;
-    border: none;
+.btn-social:hover {
+  background-color: white;
+  color: #000;
 }
 
-.tab-content .card-body {
-    padding: 20px;
+.profile-pic {
+  width: 150px;
+  height: 150px; 
+  border-radius: 50%; 
+  border: 1px solid rgb(168, 168, 168); 
+  object-fit: cover; 
+}
+.btn-outline-light {
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.tab-content h3.card-title {
-    color: #e3f2fd;
+.btn-outline-light:hover {
+  background-color: white;
+  color: #000000;
 }
 
-.tab-content ul.list-unstyled li i {
-    color: #004d99;
-    margin-right: 8px;
+.experience-section {
+  background-color: #000000;
+  color: white;
+  padding: 50px 0;
 }
 
-.skill-section {
-    border: 2px solid #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: rgba(6, 26, 41, 0.8);
+.experience-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
 }
 
-.skill-section h5 {
-    color: #e3f2fd;
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style-type: none;
 }
 
-.social-links {
-    margin-top: 20px;
+.timeline-item {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 30px;
 }
 
-.social-icon {
-    color: #e3f2fd;
-    font-size: 24px;
-    margin: 0 10px;
-    transition: color 0.3s;
+.timeline-icon {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
 }
 
-.social-icon:hover {
-    color: #42a5f5;
+.timeline-content {
+  background-color: #1c1c1c;
+  padding: 15px 25px;
+  border-radius: 8px;
+  width: 45%;
+  position: relative;
 }
-.card-title {
-    color: #FFA500 !important; /* Color naranja */
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  margin-bottom: 10px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  left: 55%;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  left: 0;
+}
+
+.timeline-item:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item:last-child:after {
+  display: none;
+}
+
+.skills-section {
+  background-color: #000000;
+  color: white;
+  padding: 50px 0;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.skills-section h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.skill-list {
+  list-style-type: none;
+  padding: 0;
+}
+.skill-list li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+}
+
+.skill-list i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+.footer-section {
+  background-color: #000000;
+  color: white;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-section p {
+  margin: 0;
+  font-size: 1rem;
 }
