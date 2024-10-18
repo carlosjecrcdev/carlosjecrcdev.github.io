@@ -90,7 +90,7 @@
 }
 
 .btn-social:hover {
-  background-color: white;
+  background-color: #666666;
   color: #000;
 }
 
@@ -110,8 +110,8 @@
 }
 
 .btn-outline-light:hover {
-  background-color: white;
-  color: #000000;
+  background-color: #666666;
+  color: #fff;
 }
 
 .experience-section {
