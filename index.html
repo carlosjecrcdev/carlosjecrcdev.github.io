@@ -1,168 +1,728 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Cruz</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="images/web.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+
+  <title>Carlos Cruz | Desarrollador .NET Full Stack</title>
+  <meta name="description"
+    content="Portafolio de Carlos Cruz, desarrollador .NET Full Stack. APIs, aplicaciones web y de escritorio con .NET, Angular, SQL Server, PostgreSQL, Kubernetes y Kafka.">
+  <meta name="author" content="Carlos Cruz">
+  <meta name="theme-color" content="#07070c">
+  <link rel="canonical" href="https://carlosjecrcdev.github.io/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="Carlos Cruz">
+  <meta property="og:title" content="Carlos Cruz | Desarrollador .NET Full Stack">
+  <meta property="og:description"
+    content="APIs, aplicaciones web y de escritorio con .NET. Experiencia construyendo software en producción: Angular, SQL, Kubernetes y Kafka.">
+  <meta property="og:url" content="https://carlosjecrcdev.github.io/">
+  <meta property="og:image" content="https://carlosjecrcdev.github.io/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Carlos Cruz — Desarrollador .NET Full Stack">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Carlos Cruz | Desarrollador .NET Full Stack">
+  <meta name="twitter:description"
+    content="APIs, aplicaciones web y de escritorio con .NET. Experiencia construyendo software en producción: Angular, SQL, Kubernetes y Kafka.">
+  <meta name="twitter:image" content="https://carlosjecrcdev.github.io/images/og-image.jpg">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="images/web.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Carlos Cruz",
+    "jobTitle": "Desarrollador .NET Full Stack",
+    "url": "https://carlosjecrcdev.github.io/",
+    "image": "https://carlosjecrcdev.github.io/images/profile.jpg",
+    "email": "mailto:carlosjecrc@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Córdoba",
+      "addressRegion": "Veracruz",
+      "addressCountry": "MX"
+    },
+    "worksFor": { "@type": "Organization", "name": "Ventus Technology" },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Universidad Tecnológica del Centro de Veracruz"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/carloscruzdev/",
+      "https://github.com/carlosjecrcdev"
+    ],
+    "knowsAbout": [
+      ".NET", "Angular", "SQL Server", "PostgreSQL", "Oracle SQL",
+      "Kubernetes", "Kafka", "WPF", "ASP.NET MVC", "SCRUM"
+    ]
+  }
+  </script>
 </head>
-<body>  
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <span class="text-orange fw-bold">Carlos</span> <span class="text-white fw-bold">Cruz</span>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Decorative background -->
+  <div class="bg-layer" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+    <div class="bg-glow glow-3"></div>
+  </div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Carlos Cruz — ir al inicio">
+        <span class="brand-mark" aria-hidden="true">CC</span>
+        <span class="brand-text">Carlos<span class="brand-dot">.</span>Cruz</span>
+      </a>
+
+      <nav class="site-nav" id="siteNav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a class="nav-link is-active" href="#inicio" aria-current="location">Inicio</a></li>
+          <li><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+          <li><a class="nav-link" href="#experiencia">Experiencia</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#formacion">Formación</a></li>
+          <li><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a class="btn btn-primary btn-sm" href="documents/CV_CarlosCruz.pdf" download>
+            <i class="fa-solid fa-download" aria-hidden="true"></i>
+            <span>Descargar CV</span>
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#acerca-de-mi">Acerca de mí</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#experiencia">Experiencia</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#skills">Skills</a>
-              </li>
-            </ul>        
-          </div>
         </div>
       </nav>
-      <section id="acerca-de-mi" class="about-section d-flex flex-column align-items-center text-center">
-        <img src="images/1655266244871.jfif" alt="Carlos Cruz" class="profile-pic">
-        <h2 class="name">Carlos Cruz</h2>
-        <div class="text-container">
-            <p class="description">
-                👋 ¡Hola! Soy desarrollador de software .NET con más de 5 años de experiencia en la creación de APIs, Desktop Apps y WebApps.
-            </p>
-            <div class="d-flex justify-content-center align-items-center">
-                <a href="documents/CV_CarlosCruz.pdf" download class="btn btn-outline-light me-2">Descargar CV</a>
-                <div class="social-buttons d-flex">
-                  <a href="https://www.linkedin.com/in/carloscruzdev/" class="btn btn-social" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/carlosjecrcdev" class="btn btn-social" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:carlosjecrc@gmail.com" class="btn btn-social" target="_blank">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                
-                </div>
-            </div>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-controls="siteNav" aria-expanded="false"
+        aria-label="Abrir menú de navegación">
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- ===================== HERO ===================== -->
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="pill">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            Córdoba, Veracruz · México
+          </span>
+
+          <h1 class="hero-title" id="hero-title">
+            Hola, soy <span class="grad-text">Carlos Cruz</span>
+          </h1>
+
+          <p class="hero-role">
+            <span class="prompt" aria-hidden="true">&gt;</span>
+            <span id="typedRole">Desarrollador .NET Full Stack</span><span class="caret" aria-hidden="true"></span>
+          </p>
+
+          <p class="hero-lead">
+            Diseño y construyo APIs, aplicaciones web y de escritorio con <strong>.NET</strong>. Más de
+            <strong data-years>8+</strong> años convirtiendo necesidades de negocio en software en producción:
+            código limpio, bases de datos bien modeladas y despliegues confiables.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contacto">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              <span>Hablemos</span>
+            </a>
+            <a class="btn btn-ghost" href="documents/CV_CarlosCruz.pdf" download>
+              <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+              <span>Descargar CV</span>
+            </a>
+          </div>
+
+          <ul class="hero-socials" aria-label="Redes y contacto">
+            <li>
+              <a class="social-btn" href="https://www.linkedin.com/in/carloscruzdev/" target="_blank"
+                rel="noopener noreferrer" aria-label="LinkedIn de Carlos Cruz" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="social-btn" href="https://github.com/carlosjecrcdev" target="_blank" rel="noopener noreferrer"
+                aria-label="GitHub de Carlos Cruz" title="GitHub">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="social-btn" href="mailto:carlosjecrc@gmail.com" aria-label="Enviar correo a Carlos Cruz"
+                title="Correo">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
         </div>
+
+        <div class="hero-visual">
+          <div class="avatar-wrap">
+            <div class="avatar-glow" aria-hidden="true"></div>
+            <div class="avatar-ring" aria-hidden="true"></div>
+            <img class="avatar" src="images/profile.jpg" width="640" height="640"
+              alt="Retrato de Carlos Cruz, desarrollador .NET Full Stack" fetchpriority="high">
+            <span class="float-chip chip-1" aria-hidden="true">
+              <i class="fa-solid fa-cubes"></i> Kubernetes
+            </span>
+            <span class="float-chip chip-2" aria-hidden="true">
+              <i class="fa-brands fa-microsoft"></i> .NET 8
+            </span>
+            <span class="float-chip chip-3" aria-hidden="true">
+              <i class="fa-brands fa-angular"></i> Angular
+            </span>
+            <span class="float-chip chip-4" aria-hidden="true">
+              <i class="fa-solid fa-stream"></i> Kafka
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="hero-stats" aria-label="Datos rápidos">
+          <li>
+            <span class="stat-num" data-count="8" data-suffix="+" data-years-count>8+</span>
+            <span class="stat-label">Años de experiencia</span>
+          </li>
+          <li>
+            <span class="stat-num" data-count="3">3</span>
+            <span class="stat-label">Empresas</span>
+          </li>
+          <li>
+            <span class="stat-num" data-count="20" data-suffix="+">20+</span>
+            <span class="stat-label">Tecnologías</span>
+          </li>
+        </ul>
+      </div>
+
+      <a class="scroll-hint" href="#sobre-mi" aria-label="Continuar a la sección Sobre mí">
+        <span class="mouse" aria-hidden="true"><span class="wheel"></span></span>
+        <span class="scroll-hint-text">Desliza</span>
+      </a>
     </section>
-      <section id="experiencia" class="experience-section">
-        <div class="container">
-          <h2 class="text-center">Experiencia</h2>
-          <div class="timeline">
-         
-            <div class="timeline-item">
-              <div class="timeline-icon"></div>
-              <div class="timeline-content">
-                <h3>Ventus Technology</h3>
-                <p><strong>Full Stack Developer</strong> Enero 2022 - Actualidad</p>
-                <ul class="list-unstyled">
-                  <li><i class="fab fa-microsoft"></i> Desarrollo de APIs con .NET 6 y .NET 8</li>
-                  <li><i class="fab fa-angular"></i> Creación de WebApps con Angular 16 y Angular 17</li>
-                  <li><i class="fab fa-docker"></i> Despliegue de aplicaciones con Kubernetes</li>
-                  <li><i class="fas fa-database"></i> Gestión de bases de datos SQL</li>
-                  <li><i class="fas fa-clipboard-list"></i> Implementación de servicios de monitoreo y control de eventos con EAGLE</li>
-                  <li><i class="fas fa-exchange-alt"></i> Integración de servicios de mensajería en tiempo real utilizando Kafka y .NET</li>
-                  <li><i class="fab fa-github"></i> Control de versiones y colaboración en proyectos con GitHub</li>
-              </ul>
-              </div>
-            </div>
-            
-            <div class="timeline-item">
-              <div class="timeline-icon"></div>
-              <div class="timeline-content">
-                <h3>724</h3>
-                <p><strong>Software Developer</strong>  Marzo 2019 - Enero 2022</p>
-                <ul class="list-unstyled">
-                  <li><i class="fab fa-microsoft"></i> Desarrollo e implementación de APIs con .NET 2.2 y .NET 3.1</li>
-                  <li><i class="fas fa-database"></i> Gestión de bases de datos SQL Server y PostgreSQL</li>
-                  <li><i class="fab fa-windows"></i> Desarrollo de aplicaciones de escritorio con .NET Framework</li>
-                  <li><i class="fas fa-paint-brush"></i> Diseño de interfaces de usuario para aplicaciones web y de escritorio utilizando DevExpress</li>
-                  <li><i class="fab fa-gitlab"></i> Control de versiones y gestión de proyectos con GitLab</li>
-              </ul>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-icon"></div>
-              <div class="timeline-content">
-                <h3>Tecnoap</h3>
-                <p><strong>Software Developer</strong> Julio 2018 - Marzo 2019</p>
-                <ul class="list-unstyled">
-                  <li><i class="fab fa-microsoft"></i> Desarrollo Web ASP.NET MVC 5</li>
-                  <li><i class="fab fa-windows"></i> Desarrollo de aplicaciones de escritorio con WPF y MVVM</li>
-                  <li><i class="fas fa-database"></i> Gestión de bases de datos con SQL Server y Oracle</li>
-                  <li><i class="fab fa-github"></i> Control de versiones con GitHub</li>
-              </ul>
-              </div>
-            </div>   
+
+    <!-- ===================== SOBRE MÍ ===================== -->
+    <section id="sobre-mi" class="section about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">Sobre mí</span>
+          <h2 id="about-title">Perfil profesional</h2>
+          <p class="section-lead">
+            Desarrollo soluciones completas: de la base de datos a la interfaz, pensando siempre en el negocio y en
+            quien va a mantener el código.
+          </p>
         </div>
-      </section>
-      <section id="skills" class="skills-section">
-        <div class="container text-center">
-          <h2 class="text-center">Skills</h2>
-          <div class="row justify-content-center">
-            <!-- Backend Skills -->
-            <div class="col-md-4">
-              <h3>Backend</h3>
-              <ul class="skill-list">
-                <li><i class="fas fa-server"></i> .NET</li>
-                <li><i class="fas fa-code"></i> .NET Framework</li>
-                <li><i class="fas fa-cubes"></i> Kubernetes</li>
-                <li><i class="fas fa-database"></i> SQL Server</li>
-                <li><i class="fas fa-database"></i> PostgreSQL</li>
-                <li><i class="fas fa-database"></i> Oracle SQL</li>
-              </ul>
-            </div>
-            <div class="col-md-4">
-              <h3>Frontend</h3>
-              <ul class="skill-list">
-                <li><i class="fab fa-angular"></i> Angular</li>
-                <li><i class="fas fa-laptop-code"></i> DevExpress</li>
-                <li><i class="fab fa-html5"></i> HTML</li>
-                <li><i class="fab fa-css3-alt"></i> CSS</li>
-                <li><i class="fab fa-js"></i> JavaScript</li>
-              </ul>
-            </div>
-            <div class="col-md-4">
-              <h3>Control</h3>
-              <ul class="skill-list">
-                <li><i class="fab fa-github"></i> GitHub</li>
-                <li><i class="fab fa-gitlab"></i> GitLab</li>
-                <li><i class="fas fa-tasks"></i> Jira</li>
-                <li><i class="fas fa-check-circle"></i> SCRUM</li>
-                <li><i class="fas fa-bell"></i> EAGLE</li>
-                <li><i class="fas fa-stream"></i> Kafka</li>
-              </ul>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Soy desarrollador de software con más de <strong data-years>8+</strong> años de experiencia en el
+              análisis, desarrollo, pruebas y despliegue de APIs, aplicaciones de escritorio y web.
+            </p>
+            <p>
+              Me especializo en el ecosistema <strong>.NET</strong> y en el manejo de bases de datos SQL Server,
+              PostgreSQL y Oracle. Trabajo con buenas prácticas, control de versiones y metodologías ágiles para
+              entregar software mantenible.
+            </p>
+            <p>
+              He participado en la modernización de plataformas: migraciones de .NET 6 a .NET 8, de Visual Basic a
+              .NET, de SQL Server a PostgreSQL y de servicios OnPremise a <strong>Kubernetes</strong>.
+            </p>
+
+            <ul class="highlight-chips" aria-label="Áreas de especialidad">
+              <li class="chip">APIs REST</li>
+              <li class="chip">Cloud Native</li>
+              <li class="chip">Mensajería en tiempo real</li>
+              <li class="chip">Buenas prácticas</li>
+              <li class="chip">Trabajo en equipo</li>
+            </ul>
+
+            <dl class="about-facts">
+              <div class="fact">
+                <dt>Ubicación</dt>
+                <dd>Córdoba, Veracruz, México</dd>
+              </div>
+              <div class="fact">
+                <dt>Rol actual</dt>
+                <dd>Full Stack Developer en Ventus Technology</dd>
+              </div>
+              <div class="fact">
+                <dt>Enfoque</dt>
+                <dd>Backend .NET · APIs · Cloud Native</dd>
+              </div>
+              <div class="fact">
+                <dt>Metodología</dt>
+                <dd>SCRUM · Git · SonarQube</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="about-visual reveal">
+            <div class="code-card">
+              <div class="code-head">
+                <span class="code-dot is-red" aria-hidden="true"></span>
+                <span class="code-dot is-yellow" aria-hidden="true"></span>
+                <span class="code-dot is-green" aria-hidden="true"></span>
+                <span class="code-title">perfil.json</span>
+                <span class="code-lang">JSON</span>
+              </div>
+              <pre class="code-body" aria-label="Resumen del perfil en formato JSON"><code><span class="tok-punc">{</span>
+  <span class="tok-key">"nombre"</span><span class="tok-punc">:</span> <span class="tok-str">"Carlos Cruz"</span><span class="tok-punc">,</span>
+  <span class="tok-key">"rol"</span><span class="tok-punc">:</span> <span class="tok-str">"Full Stack Developer"</span><span class="tok-punc">,</span>
+  <span class="tok-key">"experiencia"</span><span class="tok-punc">:</span> <span class="tok-str">"<span data-years>8+</span> años"</span><span class="tok-punc">,</span>
+  <span class="tok-key">"stack"</span><span class="tok-punc">:</span> <span class="tok-punc">[</span><span class="tok-str">".NET"</span><span class="tok-punc">,</span> <span class="tok-str">"Angular"</span><span class="tok-punc">,</span> <span class="tok-str">"SQL"</span><span class="tok-punc">]</span><span class="tok-punc">,</span>
+  <span class="tok-key">"cloud"</span><span class="tok-punc">:</span> <span class="tok-punc">[</span><span class="tok-str">"Kubernetes"</span><span class="tok-punc">,</span> <span class="tok-str">"Kafka"</span><span class="tok-punc">]</span><span class="tok-punc">,</span>
+  <span class="tok-key">"enfoque"</span><span class="tok-punc">:</span> <span class="tok-str">"APIs · Web · Desktop"</span><span class="tok-punc">,</span>
+  <span class="tok-key">"ubicacion"</span><span class="tok-punc">:</span> <span class="tok-str">"Córdoba, Veracruz"</span>
+<span class="tok-punc">}</span></code></pre>
             </div>
           </div>
         </div>
-      </section>
-      <footer class="footer-section">
-        <div class="container text-center">
-          <p>&copy; 2024 Carlos Cruz</p>       
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCIA ===================== -->
+    <section id="experiencia" class="section experience" aria-labelledby="exp-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">Experiencia</span>
+          <h2 id="exp-title">Trayectoria profesional</h2>
+          <p class="section-lead">
+            Más de <strong data-years>8+</strong> años construyendo software en producción, desde aplicaciones de
+            escritorio hasta plataformas cloud native.
+          </p>
         </div>
-      </footer>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+        <div class="timeline">
+          <div class="timeline-track" aria-hidden="true"><span class="timeline-progress" id="timelineProgress"></span></div>
+
+          <ol class="timeline-list" data-stagger>
+            <li class="timeline-item is-current reveal">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <article class="timeline-card">
+              <div class="card-meta">
+                <span class="period">
+                  <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+                  Ene 2022 — Actualidad
+                </span>
+                <span class="badge-current"><span class="pulse-dot" aria-hidden="true"></span>Actual</span>
+              </div>
+              <h3 class="role">Full Stack Developer</h3>
+              <p class="company"><i class="fa-solid fa-building" aria-hidden="true"></i>Ventus Technology</p>
+
+              <p class="card-label">Logros</p>
+              <ul class="achievements">
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  Incorporé <strong>Kafka</strong> para mensajería en tiempo real en proyectos de la empresa.
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  Automaticé despliegues con <strong>Kubernetes</strong> y migré APIs y Windows Services de
+                  OnPremise a la nube.
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  Lideré la migración de APIs de .NET 6 a <strong>.NET 8</strong>.
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  Mejoré la calidad del código con SonarQube y llevé despliegues exitosos a producción.
+                </li>
+              </ul>
+
+              <details class="more">
+                <summary>
+                  Responsabilidades y stack
+                  <i class="fa-solid fa-plus plus" aria-hidden="true"></i>
+                </summary>
+                <ul class="more-list">
+                  <li>Desarrollo de APIs con .NET 6 y .NET 8.</li>
+                  <li>WebApps con Angular 16 y 17, con control de versiones en GitHub.</li>
+                  <li>Modelado de tablas, stored procedures y reportes SQL.</li>
+                  <li>Monitoreo y control de eventos con EAGLE.</li>
+                  <li>Colaboración con equipos ágiles bajo SCRUM.</li>
+                </ul>
+              </details>
+
+              <ul class="tags" aria-label="Tecnologías usadas">
+                <li class="tag">.NET 8</li>
+                <li class="tag">.NET 6</li>
+                <li class="tag">Angular 17</li>
+                <li class="tag">Kubernetes</li>
+                <li class="tag">Kafka</li>
+                <li class="tag">SQL Server</li>
+                <li class="tag">SonarQube</li>
+                <li class="tag">EAGLE</li>
+                <li class="tag">GitHub</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item reveal">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <article class="timeline-card">
+              <div class="card-meta">
+                <span class="period">
+                  <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+                  Mar 2019 — Ene 2022
+                </span>
+              </div>
+              <h3 class="role">Desarrollador .NET</h3>
+              <p class="company"><i class="fa-solid fa-building" aria-hidden="true"></i>724 · Comercializadora Rápidos</p>
+
+              <p class="card-label">Logros</p>
+              <ul class="achievements">
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  Migré la base de datos de SQL Server a <strong>PostgreSQL</strong> sin afectar la operación.
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  Migré proyectos de Visual Basic a <strong>.NET 6</strong> y configuré servicios en producción.
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  Participé en el diseño y planeación de los nuevos desarrollos.
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  Participé en certificaciones de calidad de software con proveedores de servicios.
+                </li>
+              </ul>
+
+              <details class="more">
+                <summary>
+                  Responsabilidades y stack
+                  <i class="fa-solid fa-plus plus" aria-hidden="true"></i>
+                </summary>
+                <ul class="more-list">
+                  <li>Módulos de una aplicación de escritorio para procesos internos de la empresa.</li>
+                  <li>APIs para la comunicación con distintos proveedores de servicios.</li>
+                  <li>Control de versiones y gestión de proyectos con GitLab.</li>
+                  <li>Capacitación al personal en el uso del software.</li>
+                  <li>Sesiones de certificación de código con proveedores de servicios.</li>
+                </ul>
+              </details>
+
+              <ul class="tags" aria-label="Tecnologías usadas">
+                <li class="tag">.NET 6</li>
+                <li class="tag">.NET Framework</li>
+                <li class="tag">WPF</li>
+                <li class="tag">DevExpress</li>
+                <li class="tag">SQL Server</li>
+                <li class="tag">PostgreSQL</li>
+                <li class="tag">GitLab</li>
+                <li class="tag">VB.NET</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item reveal">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <article class="timeline-card">
+              <div class="card-meta">
+                <span class="period">
+                  <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+                  Jul 2018 — Mar 2019
+                </span>
+              </div>
+              <h3 class="role">Ingeniero de Automatización</h3>
+              <p class="company"><i class="fa-solid fa-building" aria-hidden="true"></i>Tecnoap</p>
+
+              <p class="card-label">Logros</p>
+              <ul class="achievements">
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  Desarrollé reportes para el análisis de producción y calidad de <strong>Tenaris Tamsa</strong>.
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  Creé nuevas funcionalidades en proyectos con alto grado de complejidad.
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  Participé en el despliegue y capacitación de nuevos proyectos.
+                </li>
+              </ul>
+
+              <details class="more">
+                <summary>
+                  Responsabilidades y stack
+                  <i class="fa-solid fa-plus plus" aria-hidden="true"></i>
+                </summary>
+                <ul class="more-list">
+                  <li>Reportes con ASP.NET MVC 5 para el control de producción de Tenaris Tamsa.</li>
+                  <li>Módulos en WPF utilizando el patrón MVVM.</li>
+                  <li>Gestión de bases de datos SQL Server y Oracle.</li>
+                  <li>Guardias de soporte durante los despliegues de las aplicaciones.</li>
+                </ul>
+              </details>
+
+              <ul class="tags" aria-label="Tecnologías usadas">
+                <li class="tag">ASP.NET MVC 5</li>
+                <li class="tag">WPF</li>
+                <li class="tag">MVVM</li>
+                <li class="tag">SQL Server</li>
+                <li class="tag">Oracle</li>
+                <li class="tag">GitHub</li>
+              </ul>
+            </article>
+            </li>
+          </ol>
+        </div>
+
+        <p class="timeline-start reveal">
+          <span class="start-dot" aria-hidden="true"></span>
+          2018 — Inicio de mi trayectoria como desarrollador
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="section skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">Skills</span>
+          <h2 id="skills-title">Tecnologías y herramientas</h2>
+          <p class="section-lead">
+            El stack con el que trabajo día a día, desde el backend y las bases de datos hasta el despliegue.
+          </p>
+        </div>
+
+        <div class="skills-grid" data-stagger>
+          <article class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-server" aria-hidden="true"></i></div>
+            <h3>Backend</h3>
+            <ul class="chip-list">
+              <li class="chip">.NET 8</li>
+              <li class="chip">.NET Framework</li>
+              <li class="chip">ASP.NET MVC</li>
+              <li class="chip">Web API</li>
+              <li class="chip">WPF</li>
+              <li class="chip">Entity Framework</li>
+              <li class="chip">Windows Services</li>
+              <li class="chip">Kafka</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></div>
+            <h3>Frontend</h3>
+            <ul class="chip-list">
+              <li class="chip">Angular 17</li>
+              <li class="chip">Angular 16</li>
+              <li class="chip">HTML5</li>
+              <li class="chip">CSS3</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">DevExpress</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+            <h3>Datos</h3>
+            <ul class="chip-list">
+              <li class="chip">SQL Server</li>
+              <li class="chip">PostgreSQL</li>
+              <li class="chip">Oracle SQL</li>
+              <li class="chip">Stored Procedures</li>
+              <li class="chip">Reportes SQL</li>
+            </ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-gears" aria-hidden="true"></i></div>
+            <h3>DevOps &amp; Control</h3>
+            <ul class="chip-list">
+              <li class="chip">Kubernetes</li>
+              <li class="chip">Docker</li>
+              <li class="chip">GitHub</li>
+              <li class="chip">GitLab</li>
+              <li class="chip">Jira</li>
+              <li class="chip">SonarQube</li>
+              <li class="chip">EAGLE</li>
+              <li class="chip">SCRUM</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <div class="marquee-group">
+              <span>.NET</span><span>Angular</span><span>Kubernetes</span><span>Kafka</span><span>Docker</span>
+              <span>SQL Server</span><span>PostgreSQL</span><span>Oracle</span><span>WPF</span>
+              <span>DevExpress</span><span>SonarQube</span><span>GitHub</span><span>GitLab</span>
+              <span>Jira</span><span>SCRUM</span><span>EAGLE</span>
+            </div>
+            <div class="marquee-group">
+              <span>.NET</span><span>Angular</span><span>Kubernetes</span><span>Kafka</span><span>Docker</span>
+              <span>SQL Server</span><span>PostgreSQL</span><span>Oracle</span><span>WPF</span>
+              <span>DevExpress</span><span>SonarQube</span><span>GitHub</span><span>GitLab</span>
+              <span>Jira</span><span>SCRUM</span><span>EAGLE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FORMACIÓN ===================== -->
+    <section id="formacion" class="section education" aria-labelledby="edu-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-kicker">Formación</span>
+          <h2 id="edu-title">Educación y aprendizaje continuo</h2>
+          <p class="section-lead">
+            Formación en ingeniería y actualización constante sobre el stack con el que trabajo.
+          </p>
+        </div>
+
+        <div class="edu-grid" data-stagger>
+          <article class="edu-card edu-main reveal">
+            <div class="edu-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
+            <span class="edu-tag">Educación</span>
+            <h3>Ingeniería en Tecnologías de la Información y Comunicación</h3>
+            <p class="edu-sub">Área Sistemas Informáticos</p>
+            <p class="edu-org">
+              <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+              Universidad Tecnológica del Centro de Veracruz
+            </p>
+          </article>
+
+          <article class="edu-card reveal">
+            <div class="edu-icon"><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i></div>
+            <span class="edu-tag">Aprendizaje continuo</span>
+            <ul class="learn-list">
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Capacitaciones internas para adoptar nuevas tecnologías.
+              </li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Certificación de calidad de código con proveedores de servicios.
+              </li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Modernización de stacks: .NET 6 → .NET 8, VB → .NET y OnPremise → Kubernetes.
+              </li>
+              <li>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
+                Buenas prácticas: SCRUM, SonarQube y código limpio.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section id="contacto" class="section contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-copy">
+            <span class="section-kicker">Contacto</span>
+            <h2 id="contact-title">¿Construimos algo juntos?</h2>
+            <p>
+              Si buscas a alguien para construir o modernizar tu plataforma, hablemos. Puedo ayudarte con APIs,
+              aplicaciones web y de escritorio, bases de datos y despliegues.
+            </p>
+            <div class="contact-actions">
+              <a class="btn btn-primary"
+                href="mailto:carlosjecrc@gmail.com?subject=Hola%20Carlos%2C%20quiero%20hablar%20contigo">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                <span>Enviar correo</span>
+              </a>
+              <a class="btn btn-ghost" href="https://www.linkedin.com/in/carloscruzdev/" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-side">
+            <p class="contact-label">Escríbeme</p>
+            <div class="email-box">
+              <a href="mailto:carlosjecrc@gmail.com">carlosjecrc@gmail.com</a>
+              <button class="copy-btn" type="button" data-copy="carlosjecrc@gmail.com"
+                aria-label="Copiar correo electrónico">
+                <i class="fa-regular fa-copy" aria-hidden="true"></i>
+              </button>
+            </div>
+            <p class="contact-meta">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              Córdoba, Veracruz, México
+            </p>
+            <p class="contact-meta">
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+              Actualmente en Ventus Technology
+            </p>
+            <div class="contact-extra">
+              <a class="social-btn" href="https://github.com/carlosjecrcdev" target="_blank"
+                rel="noopener noreferrer" aria-label="GitHub de Carlos Cruz" title="GitHub">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+              <a class="btn btn-ghost btn-sm" href="documents/CV_CarlosCruz.pdf" download>
+                <i class="fa-solid fa-download" aria-hidden="true"></i>
+                <span>Descargar CV</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="#inicio" aria-label="Volver al inicio">
+          <span class="brand-mark" aria-hidden="true">CC</span>
+          <span class="brand-text">Carlos<span class="brand-dot">.</span>Cruz</span>
+        </a>
+        <p class="footer-note">Desarrollador .NET Full Stack · Córdoba, Veracruz</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Enlaces del pie de página">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#skills">Skills</a>
+        <a href="#contacto">Contacto</a>
+        <a href="documents/CV_CarlosCruz.pdf" download>CV</a>
+      </nav>
+
+      <p class="footer-copy">© <span id="year">2026</span> Carlos Cruz</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Volver arriba">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js" defer></script>
 </body>
+
 </html>
