@@ -22,6 +22,17 @@
     return Math.min(Math.max(value, min), max);
   }
 
+  function attempt(fn, fallback) {
+    try {
+      return fn();
+    } catch (error) {
+      if (window.console && console.error) {
+        console.error('[Portafolio]', error);
+      }
+      return fallback;
+    }
+  }
+
   /* ---------- Años de experiencia (calculados) ---------- */
   var CAREER_START_YEAR = 2018;
   var CAREER_START_MONTH = 6; // Julio (0 = enero)
@@ -499,17 +510,19 @@
 
   /* ---------- Arranque ---------- */
   function boot() {
-    paintYears();
-    paintYear();
-    initNav();
-    initReveal();
-    initCounters();
-    initTyping();
-    initCopy();
-    initCursorGlow();
+    // Primero las animaciones de entrada: si algo más falla, el contenido se ve.
+    attempt(initReveal);
 
-    var updateScrollUI = initScrollUI();
-    var updateTimeline = initTimeline();
+    attempt(paintYears);
+    attempt(paintYear);
+    attempt(initNav);
+    attempt(initCounters);
+    attempt(initTyping);
+    attempt(initCopy);
+    attempt(initCursorGlow);
+
+    var updateScrollUI = attempt(initScrollUI) || function () {};
+    var updateTimeline = attempt(initTimeline) || function () {};
 
     var ticking = false;
 
@@ -535,6 +548,8 @@
     // Estado inicial
     updateScrollUI();
     updateTimeline();
+
+    window.__ccBooted = true;
   }
 
   if (doc.readyState === 'loading') {

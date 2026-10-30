@@ -4,7 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <script>
+    document.documentElement.classList.replace('no-js', 'js');
+    // Red de seguridad: si main.js no llega a ejecutarse, el contenido no queda oculto.
+    window.addEventListener('load', function () {
+      window.setTimeout(function () {
+        if (!window.__ccBooted) {
+          document.documentElement.classList.remove('js');
+        }
+      }, 1500);
+    });
+  </script>
 
   <title>Carlos Cruz | Desarrollador .NET Full Stack</title>
   <meta name="description"
@@ -21,18 +31,17 @@
   <meta property="og:description"
     content="APIs, aplicaciones web y de escritorio con .NET. Experiencia construyendo software en producción: Angular, SQL, Kubernetes y Kafka.">
   <meta property="og:url" content="https://carlosjecrcdev.github.io/">
-  <meta property="og:image" content="https://carlosjecrcdev.github.io/images/og-image.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image" content="https://carlosjecrcdev.github.io/images/1655266244871.jfif">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
   <meta property="og:image:alt" content="Carlos Cruz — Desarrollador .NET Full Stack">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Carlos Cruz | Desarrollador .NET Full Stack">
   <meta name="twitter:description"
     content="APIs, aplicaciones web y de escritorio con .NET. Experiencia construyendo software en producción: Angular, SQL, Kubernetes y Kafka.">
-  <meta name="twitter:image" content="https://carlosjecrcdev.github.io/images/og-image.jpg">
+  <meta name="twitter:image" content="https://carlosjecrcdev.github.io/images/1655266244871.jfif">
 
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <link rel="alternate icon" href="images/web.png" type="image/png">
+  <link rel="icon" href="images/web.png" type="image/png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +60,7 @@
     "name": "Carlos Cruz",
     "jobTitle": "Desarrollador .NET Full Stack",
     "url": "https://carlosjecrcdev.github.io/",
-    "image": "https://carlosjecrcdev.github.io/images/profile.jpg",
+    "image": "https://carlosjecrcdev.github.io/images/1655266244871.jfif",
     "email": "mailto:carlosjecrc@gmail.com",
     "address": {
       "@type": "PostalAddress",
@@ -131,7 +140,8 @@
           </span>
 
           <h1 class="hero-title" id="hero-title">
-            Hola, soy <span class="grad-text">Carlos Cruz</span>
+            Hola, soy<br>
+            <span class="grad-text">Carlos Cruz</span>
           </h1>
 
           <p class="hero-role">
@@ -140,7 +150,7 @@
           </p>
 
           <p class="hero-lead">
-            Diseño y construyo APIs, aplicaciones web y de escritorio con <strong>.NET</strong>. Más de
+            Diseño y construyo APIs, aplicaciones web y de escritorio con <strong>.NET</strong>.
             <strong data-years>8+</strong> años convirtiendo necesidades de negocio en software en producción:
             código limpio, bases de datos bien modeladas y despliegues confiables.
           </p>
@@ -182,8 +192,10 @@
           <div class="avatar-wrap">
             <div class="avatar-glow" aria-hidden="true"></div>
             <div class="avatar-ring" aria-hidden="true"></div>
-            <img class="avatar" src="images/profile.jpg" width="640" height="640"
-              alt="Retrato de Carlos Cruz, desarrollador .NET Full Stack" fetchpriority="high">
+            <div class="avatar-frame">
+              <img class="avatar" src="images/1655266244871.jfif" width="800" height="800"
+                alt="Retrato de Carlos Cruz, desarrollador .NET Full Stack" fetchpriority="high">
+            </div>
             <span class="float-chip chip-1" aria-hidden="true">
               <i class="fa-solid fa-cubes"></i> Kubernetes
             </span>
@@ -238,7 +250,7 @@
         <div class="about-grid">
           <div class="about-text reveal">
             <p>
-              Soy desarrollador de software con más de <strong data-years>8+</strong> años de experiencia en el
+              Soy desarrollador de software con <strong data-years>8+</strong> años de experiencia en el
               análisis, desarrollo, pruebas y despliegue de APIs, aplicaciones de escritorio y web.
             </p>
             <p>
@@ -310,7 +322,7 @@
           <span class="section-kicker">Experiencia</span>
           <h2 id="exp-title">Trayectoria profesional</h2>
           <p class="section-lead">
-            Más de <strong data-years>8+</strong> años construyendo software en producción, desde aplicaciones de
+            <strong data-years>8+</strong> años construyendo software en producción, desde aplicaciones de
             escritorio hasta plataformas cloud native.
           </p>
         </div>
@@ -345,7 +357,7 @@
                 </li>
                 <li>
                   <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-                  Lideré la migración de APIs de .NET 6 a <strong>.NET 8</strong>.
+                  Migré APIs de .NET 6 a <strong>.NET 8</strong>.
                 </li>
                 <li>
                   <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
@@ -397,7 +409,7 @@
               <ul class="achievements">
                 <li>
                   <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-                  Migré la base de datos de SQL Server a <strong>PostgreSQL</strong> sin afectar la operación.
+                  Migré la base de datos de SQL Server a <strong>PostgreSQL</strong> con éxito.
                 </li>
                 <li>
                   <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
@@ -600,7 +612,7 @@
         </div>
 
         <div class="edu-grid" data-stagger>
-          <article class="edu-card edu-main reveal">
+          <article class="edu-card reveal">
             <div class="edu-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
             <span class="edu-tag">Educación</span>
             <h3>Ingeniería en Tecnologías de la Información y Comunicación</h3>

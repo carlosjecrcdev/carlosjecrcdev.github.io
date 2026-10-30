@@ -7,9 +7,7 @@
 :root {
   --bg: #07070c;
   --bg-2: #0b0b12;
-  --bg-3: #101018;
   --surface: rgba(255, 255, 255, 0.045);
-  --surface-2: rgba(255, 255, 255, 0.075);
   --border: rgba(255, 255, 255, 0.09);
   --border-strong: rgba(255, 255, 255, 0.16);
 
@@ -24,7 +22,6 @@
   --grad: linear-gradient(135deg, #ffc46b 0%, #ff9900 45%, #ff6a00 100%);
 
   --radius: 20px;
-  --radius-sm: 12px;
   --shadow-lg: 0 30px 70px -30px rgba(0, 0, 0, 0.9);
 
   --font-display: "Sora", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -561,8 +558,8 @@ body.nav-open {
   flex-direction: column;
   justify-content: center;
   min-height: 100svh;
-  padding-top: calc(var(--header-h) + clamp(40px, 8vw, 96px));
-  padding-bottom: clamp(24px, 4vw, 48px);
+  padding-top: calc(var(--header-h) + clamp(32px, 6vw, 72px));
+  padding-bottom: clamp(20px, 3vw, 36px);
 }
 
 .hero-inner {
@@ -601,8 +598,8 @@ body.nav-open {
 }
 
 .hero-title {
-  margin: 20px 0 16px;
-  font-size: clamp(2.45rem, 6vw, 4.5rem);
+  margin: 18px 0 14px;
+  font-size: clamp(2.4rem, 5.4vw, 4.2rem);
   font-weight: 800;
   line-height: 1.03;
   letter-spacing: -0.035em;
@@ -613,7 +610,7 @@ body.nav-open {
   align-items: center;
   gap: 10px;
   min-height: 1.7em;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   font-family: var(--font-mono);
   font-size: clamp(0.95rem, 1.7vw, 1.15rem);
   letter-spacing: 0.01em;
@@ -647,13 +644,13 @@ body.nav-open {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 30px;
+  margin-top: 26px;
 }
 
 .hero-socials {
   display: flex;
   gap: 12px;
-  margin-top: 28px;
+  margin-top: 24px;
   padding: 0;
   list-style: none;
 }
@@ -697,15 +694,32 @@ body.nav-open {
   animation: spin 16s linear infinite;
 }
 
-.avatar {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.avatar-frame {
+  position: absolute;
+  inset: 0;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: center 18%;
+  overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: 0 30px 70px -30px #000;
+}
+
+.avatar-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(255, 153, 0, 0.1), transparent 60%),
+    linear-gradient(180deg, transparent 55%, rgba(7, 7, 12, 0.5));
+  pointer-events: none;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.82) contrast(1.04);
+  transform: scale(1.55);
+  transform-origin: 50% 24%;
 }
 
 .float-chip {
@@ -761,7 +775,7 @@ body.nav-open {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
-  margin-top: clamp(40px, 6vw, 68px);
+  margin-top: clamp(32px, 4vw, 52px);
   padding: 0;
   list-style: none;
   border: 1px solid var(--border);
@@ -808,7 +822,7 @@ body.nav-open {
   align-items: center;
   gap: 8px;
   width: max-content;
-  margin: clamp(22px, 3vw, 36px) auto 0;
+  margin: clamp(18px, 2.5vw, 28px) auto 0;
   color: var(--muted);
   font-family: var(--font-mono);
   font-size: 0.68rem;
@@ -846,7 +860,6 @@ body.nav-open {
 .section {
   position: relative;
   padding-block: clamp(72px, 9vw, 124px);
-  scroll-margin-top: calc(var(--header-h) + 16px);
 }
 
 .section-head {
@@ -1067,7 +1080,6 @@ body.nav-open {
   margin-left: -1px;
   border-radius: 2px;
   background: rgba(255, 255, 255, 0.08);
-  overflow: hidden;
 }
 
 .timeline-progress {
@@ -2083,10 +2095,6 @@ html.js .reveal.is-visible {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .about-visual {
-    order: -1;
-  }
-
   .code-body {
     font-size: 0.8rem;
   }
@@ -2194,6 +2202,12 @@ html.js .reveal.is-visible {
   .code-body {
     padding: 16px;
     font-size: 0.74rem;
+  }
+}
+
+@media (max-height: 820px) and (min-width: 992px) {
+  .scroll-hint {
+    display: none;
   }
 }
 
